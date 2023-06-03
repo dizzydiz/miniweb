@@ -31,6 +31,7 @@ fn handle_connection(mut stream: TcpStream) {
 }
 
 fn write_respons(stream: &mut TcpStream, status_line: &str, file_path: &str) {
+    //TODO  add a test
     let contents = fs::read_to_string(file_path).unwrap();
 
     let content_length = contents.len();
